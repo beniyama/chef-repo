@@ -1,0 +1,18 @@
+{
+	"name": "cakephp",
+	"default_attributes": {
+	},
+	"json_class": "Chef::Role",
+	"description": "",
+	"chef_type": "role",
+	"run_list": [
+		"recipe[yum::remi]",
+		"recipe[ntp]",
+		"recipe[openssh]",
+		"recipe[git]",
+		"recipe[apache2]",
+		"recipe[php]",
+		"recipe[composer]",
+		"recipe[cakephp]"
+	]
+}

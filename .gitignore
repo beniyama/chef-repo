@@ -1,1 +1,4 @@
+*.lock
+.vagrant
 /cookbooks/
+/shared/

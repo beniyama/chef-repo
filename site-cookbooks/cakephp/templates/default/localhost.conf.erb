@@ -1,0 +1,12 @@
+LoadModule rewrite_module modules/mod_rewrite.so
+ServerName localhost
+
+<VirtualHost *:80>
+        ServerName localhost
+        DocumentRoot /shared/cake/HelloCake/webroot
+        RewriteEngine On
+        <Directory "/shared/cake/HelloCake">
+                options FollowSymLinks
+                AllowOverride All
+        </Directory>
+</VirtualHost>
