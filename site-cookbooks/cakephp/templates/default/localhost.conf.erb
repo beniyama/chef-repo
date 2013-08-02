@@ -3,9 +3,9 @@ ServerName localhost
 
 <VirtualHost *:80>
         ServerName localhost
-        DocumentRoot /shared/cake/HelloCake/webroot
+        DocumentRoot /var/www/cake/HelloCake/webroot/
         RewriteEngine On
-        <Directory "/shared/cake/HelloCake">
+        <Directory "/var/www/cake/HelloCake/">
                 options FollowSymLinks
                 AllowOverride All
         </Directory>

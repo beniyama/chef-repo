@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-directory "/shared/cake" do
+directory "/var/www/cake" do
 	owner "vagrant"
 	group "vagrant"
 	mode 0755
@@ -23,10 +23,31 @@ template "localhost.conf" do
 	notifies :reload, 'service[apache2]'
 end
 
+template "Tokyo" do
+	path "/etc/localtime"
+	source "Tokyo.erb"
+	owner "root"
+	group "root"
+	mode 0644
+	notifies :reload, 'service[ntpd]'
+end
+
 template "composer.json" do
-	path "/shared/cake/composer.json"
+	path "/var/www/cake/composer.json"
 	source "composer.json.erb"
 	owner "vagrant"
 	group "vagrant"
 	mode 0644
+end
+
+execute "install_cake_core" do
+	user "vagrant"
+	group "vagrant"
+	command "cd /var/www/cake && composer install"
+end
+
+execute "install_cake_app" do
+	user "vagrant"
+	group "vagrant"
+	command "cd /var/www/cake && echo y | ./Vendor/bin/cake bake project HelloCake"
 end

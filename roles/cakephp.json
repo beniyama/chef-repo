@@ -6,6 +6,7 @@
 	"description": "",
 	"chef_type": "role",
 	"run_list": [
+		"recipe[iptables::disabled]",
 		"recipe[yum::remi]",
 		"recipe[ntp]",
 		"recipe[openssh]",
