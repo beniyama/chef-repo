@@ -1,7 +1,7 @@
 chef-repo
 =========
 
-An experimental chef-repo repository for CakePHP study. This chef-repo includes mimimum chef recipes and vagrant file to try CakePHP without any configuration.
+An experimental chef-repo repository for CakePHP study. This chef-repo includes mimimum chef recipes, composer.json and vagrant file to try CakePHP without any configuration.
 
 To start the tour, install VirtualBox and Vagrant first and then type:
 
@@ -11,7 +11,7 @@ You'd see long output while some magic happens. Take your coffee for a while and
 
     http://localhost:8080
 
-with your favorite browser. This repo is still on develop and you only can see nasty Cake warnings now.
+with your favorite browser. However this repo is still on develop and you only can see nasty Cake warnings now :P
 
 To develop the recipes, instead of 'vagrant up',
 
