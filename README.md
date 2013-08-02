@@ -11,6 +11,10 @@ You'd see long output while some magic happens. Take your coffee for a while and
 
     http://localhost:8080
 
-with your favorite browser.
+with your favorite browser. This repo is still on develop and you only can see nasty Cake warnings now.
+
+To develop the recipes, instead of 'vagrant up',
 
     knife solo cook -r cakephp vagrant@192.168.33.10
+
+works to check how your modification affects the VM setup.
