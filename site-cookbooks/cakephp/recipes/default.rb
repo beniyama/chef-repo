@@ -48,3 +48,19 @@ execute "install_cake_app" do
 	group "vagrant"
 	command "cd /var/www/cake && echo y | ./Vendor/bin/cake bake project HelloCake"
 end
+
+template "database.php" do
+	path "/var/www/cake/HelloCake/Config/database.php"
+	source "database.php.erb"
+	owner "vagrant"
+	group "vagrant"
+	mode 0644
+end
+
+template "core.php" do
+	path "/var/www/cake/HelloCake/Config/core.php"
+	source "core.php.erb"
+	owner "vagrant"
+	group "vagrant"
+	mode 0644
+end
