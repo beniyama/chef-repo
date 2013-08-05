@@ -1,4 +1,4 @@
-chef-repo
+chef-repo for CakePHP starters
 =========
 
 An experimental chef-repo repository for CakePHP study. This chef-repo includes mimimum chef recipes, composer.json and vagrant file to try CakePHP without any configuration.
@@ -17,4 +17,4 @@ To develop the recipes, instead of 'vagrant up',
 
     knife solo cook -r cakephp vagrant@192.168.33.10
 
-works to check how your modification affects the VM setup.
+should work to check how your modification affects the VM setup.
