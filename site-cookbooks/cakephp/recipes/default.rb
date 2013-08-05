@@ -23,13 +23,10 @@ template "localhost.conf" do
 	notifies :reload, 'service[apache2]'
 end
 
-template "Tokyo" do
-	path "/etc/localtime"
-	source "Tokyo.erb"
-	owner "root"
+execute "timezone" do
+	user "root"
 	group "root"
-	mode 0644
-	notifies :reload, 'service[ntpd]'
+	command "rm -f /etc/localtime; ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime"
 end
 
 template "composer.json" do
